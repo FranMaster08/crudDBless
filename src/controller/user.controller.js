@@ -12,7 +12,22 @@ const userController = {
     }
 
   },
-  updateUser: (req, res, next) => {},
-  deleteUser: (req, res, next) => {},
+  updateUser: (req, res, next) => {
+   
+    const isComplete= userModel.updateUser(req.params.id, req.body)
+    if(isComplete){
+        res.json({ users: userModel.getAllUser()})
+    }else{
+        res.json({ error: 'No se actualizo data.'})
+    }
+  },
+  deleteUser: (req, res, next) => {
+    const isComplete= userModel.deleteUser(req.params.id, req.body)
+    if(isComplete){
+        res.json({ users: userModel.getAllUser()})
+    }else{
+        res.json({ error: 'No se actualizo data.'})
+    }
+  },
 };
 module.exports = userController;

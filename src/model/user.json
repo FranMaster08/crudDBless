@@ -1,14 +1,12 @@
 [
     {
-        "name": "Fran",
-        "edad": "15"
-    },
-    {
-        "name": "Fede",
-        "edad": "15"
-    },
-    {
+        "id": 0,
         "name": "Juli",
         "edad": "15"
+    },
+    {
+        "id": "1",
+        "name": "Fran",
+        "edad": "30"
     }
 ]
